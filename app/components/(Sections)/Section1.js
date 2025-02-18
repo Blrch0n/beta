@@ -3,7 +3,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <section className="w-full h-[100vh] flex items-center justify-center overflow-hidden relative">
+    <section className="w-full h-[1000px] flex items-center justify-center overflow-hidden relative">
       {/* Background Image */}
       <Image
         className="absolute top-0 left-0 -z-10" // Ensure it's behind everything
@@ -21,7 +21,7 @@ const Section1 = () => {
       </div>
 
       {/* Text Content */}
-      <div className="w-[864px] h-[690px] absolute right-0c bottom-1/4 flex flex-col gap-5 items-start justify-center  text-white z-10">
+      <div className="w-[864px] h-[690px] absolute right-[20%] bottom-[20%] flex flex-col gap-5 items-start justify-center  text-white z-10">
         <h2 className="text-[90px] font-montserrat font-extrabold">
           I LOVE<br></br> WHAT I DO
         </h2>
