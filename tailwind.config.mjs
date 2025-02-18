@@ -12,6 +12,10 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      montserrat: ["Montserrat", "serif"],
+      mulish: ["Mulish", "sans-serif"],
+    },
   },
   plugins: [],
 };
