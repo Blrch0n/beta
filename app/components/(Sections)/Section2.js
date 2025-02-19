@@ -20,6 +20,7 @@ const section2_data = [
 const Section2 = () => {
   return (
     <section className="w-full h-[932px] flex items-center justify-center bg-white overflow-hidden relative">
+      {/* <img src=""></img> */}
       <div className="w-[1140px] h-full flex flex-row items-center justify-between">
         <img src="/skill.png" className="w-[635px] h-[607px]"></img>
         <div className="w-[475px] h-full flex flex-col items-start justify-center">
