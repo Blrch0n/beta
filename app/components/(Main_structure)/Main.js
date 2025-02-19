@@ -8,6 +8,8 @@ import Section6 from "../(Sections)/Section6";
 import Section7 from "../(Sections)/Section7";
 import Section8 from "../(Sections)/Section8";
 import CardNavigation from "../(Sections)/Section8";
+import Section9 from "../(Sections)/Section9";
+import Section11 from "../(Sections)/Section11";
 
 const Main = () => {
   return (
@@ -20,6 +22,9 @@ const Main = () => {
       <Section6 />
       <Section7 />
       <Section8 />
+      <Section9 />
+      <Section8 />
+      <Section11 />
     </div>
   );
 };
