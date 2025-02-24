@@ -1,3 +1,4 @@
+import { FaPhoneAlt } from "react-icons/fa";
 const section2_data = [
   {
     title: "UI/UX DESIGN",
@@ -19,8 +20,10 @@ const section2_data = [
 
 const Section2 = () => {
   return (
-    <section className="w-full h-[932px] flex items-center justify-center bg-white overflow-hidden relative">
-      {/* <img src=""></img> */}
+    <section
+      className="w-full h-[932px] flex items-center justify-center bg-white overflow-hidden relative]"
+      style={{ backgroundImage: "url(/service_bg.jpg  )" }}
+    >
       <div className="w-[1140px] h-full flex flex-row items-center justify-between">
         <img src="/skill.png" className="w-[635px] h-[607px]"></img>
         <div className="w-[475px] h-full flex flex-col items-start justify-center">
@@ -40,17 +43,17 @@ const Section2 = () => {
             </p>
             <a
               href="/"
-              className="text-white bg-[#ff9a00] overflow-hidden relative w-fit h-fit py-[20px] rounded-full px-[60px] mt-2 "
+              className="text-white bg-[#ff9a00] overflow-hidden group relative w-fit h-fit py-[20px] rounded-full px-[60px] mt-2 "
             >
               LEARN MORE
-              <span className=" rounded-full flex items-center justify-center rounded-tl-none absolute top-0 right-2 bg-white w-10 h-10">
-                <img src="/dots-blue.png"></img>
+              <span className=" rounded-full flex items-center justify-center rounded-tl-none absolute top-0 group-hover:top-[-40px] duration-300 right-2 bg-white w-10 h-10">
+                <FaPhoneAlt size={"16px"} color={"#ff9a00"} />
               </span>
             </a>
-            <div className="w-full h-fit flex flex-wrap gap-5 items-center justify-between">
+            <div className="w-full h-fit grid grid-cols-2 grid-rows-2 gap-5 items-center justify-between">
               {section2_data.map((data, index) => (
                 <div
-                  className="text-black w-fit h-fit text-[16px] font-montserrat whitespace-nowrap flex items-center gap-2 relative"
+                  className="text-black w-full h-fit text-[16px] font-montserrat gap-2 relative"
                   key={index}
                 >
                   {data.title}

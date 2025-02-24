@@ -22,7 +22,10 @@ const services = [
 
 const Section6 = () => {
   return (
-    <section className="w-full flex bg-black   justify-center py-16">
+    <section
+      className="w-full flex justify-center py-16"
+      style={{ backgroundImage: "url(/service_bg.jpg)" }}
+    >
       <div className="w-[1140px] flex flex-col items-start">
         {/* Header */}
         <div className="mb-10">

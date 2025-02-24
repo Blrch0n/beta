@@ -11,10 +11,19 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-    },
-    fontFamily: {
-      montserrat: ["Montserrat", "serif"],
-      mulish: ["Mulish", "sans-serif"],
+      fontFamily: {
+        montserrat: ["Montserrat", "serif"],
+        mulish: ["Mulish", "sans-serif"],
+      },
+      keyframes: {
+        bounceCustom: {
+          "0%, 100%": { transform: "translateY(20px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+      },
+      animation: {
+        bounceCustom: "bounceCustom 2s infinite",
+      },
     },
   },
   plugins: [],

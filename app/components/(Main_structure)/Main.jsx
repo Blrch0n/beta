@@ -7,13 +7,16 @@ import Section5 from "../(Sections)/Section5";
 import Section6 from "../(Sections)/Section6";
 import Section7 from "../(Sections)/Section7";
 import Section8 from "../(Sections)/Section8";
-import CardNavigation from "../(Sections)/Section8";
 import Section9 from "../(Sections)/Section9";
 import Section11 from "../(Sections)/Section11";
+import Section12 from "../(Sections)/Section12";
+import Section13 from "../(Sections)/Section13";
+import BackToTop from "./BackToTop";
 
 const Main = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-fit w-full">
+    <div className="flex flex-col items-center justify-center relative h-fit w-full">
+      return (
       <Section1 />
       <Section2 />
       <Section3 />
@@ -25,6 +28,9 @@ const Main = () => {
       <Section9 />
       <Section8 />
       <Section11 />
+      <Section12 />
+      <Section13 />
+      <BackToTop />
     </div>
   );
 };
