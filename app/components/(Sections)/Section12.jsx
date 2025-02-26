@@ -6,7 +6,14 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Section12 = () => {
   return (
-    <section className="w-full h-[609.6px] flex bg-blue-200 justify-center items-center">
+    <section className="w-full h-[609.6px] flex overflow-hidden justify-center relative items-center">
+      <span className="absolute top-0 left-0 w-[40%] h-full -z-[10]">
+        <img
+          src="/image_form.jpg"
+          className="w-full h-full object-cover"
+          alt="background"
+        ></img>
+      </span>
       <div className="w-[1140px] h-fit flex flex-row">
         <div className="flex flex-col gap-5 w-[517px] h-fit">
           <div className="flex flex-col gap-[10px] items-start">
@@ -67,6 +74,13 @@ const Section12 = () => {
           </button>
         </div>
       </div>
+      <span className="absolute top-0 right-0 w-[60%] h-full -z-10">
+        <img
+          src="/round_1.jpg"
+          className="w-full h-full object-cover"
+          alt="Background"
+        />
+      </span>
     </section>
   );
 };

@@ -1,5 +1,5 @@
 const images = [
-  { src: "/image5.png", alt: "image5", colSpan: 2, rowSpan: 2 },
+  { src: "/image5.png", alt: "image5", colSpan: 2, rowSpan: 1 },
   { src: "/image4.png", alt: "image4", colSpan: 1, rowSpan: 1 },
   { src: "/image6.png", alt: "image6", colSpan: 1, rowSpan: 2 },
   { src: "/image3.png", alt: "image3", colSpan: 1, rowSpan: 1 },
@@ -13,10 +13,14 @@ const Section5 = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`col-span-${image.colSpan} row-span-${image.rowSpan} w-full h-auto`}
+          className={`w-full h-auto`}
+          style={{
+            gridColumn: `span ${image.colSpan}/span ${image.colSpan}`,
+            gridRow: `span ${image.rowSpan}/span ${image.rowSpan}`,
+          }}
         >
           <img
-            className="w-full h-[40vh] object-cover"
+            className="w-full h-auto object-cover"
             src={image.src}
             alt={image.alt}
           />

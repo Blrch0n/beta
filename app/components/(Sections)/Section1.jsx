@@ -1,15 +1,11 @@
-import Image from "next/image";
 import React from "react";
 
 const Section1 = () => {
   return (
-    <section className="w-full h-[1000px] flex items-center justify-center relative">
-      <Image
-        className="absolute top-0 left-0 -z-10" // Ensure it's behind everything
-        src="/banner_copy.png"
-        layout="fill"
-        alt="background"
-      />
+    <section
+      className="w-full h-[1000px] flex items-center justify-center relative bg-no-repeat bg-cover"
+      style={{ backgroundImage: "url(/banner_copy.png" }}
+    >
       <div className="relavite w-[1140px] h-full relative justify-end flex ">
         <div className="absolute left-0 bottom-0 z-10">
           <img src={"/girl.png"} width={520} height={824} alt="girl" />

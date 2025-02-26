@@ -12,11 +12,11 @@ import Section11 from "../(Sections)/Section11";
 import Section12 from "../(Sections)/Section12";
 import Section13 from "../(Sections)/Section13";
 import BackToTop from "./BackToTop";
+import Section10 from "../(Sections)/Section10";
 
 const Main = () => {
   return (
     <div className="flex flex-col items-center justify-center relative h-fit w-full">
-      return (
       <Section1 />
       <Section2 />
       <Section3 />
@@ -26,7 +26,7 @@ const Main = () => {
       <Section7 />
       <Section8 />
       <Section9 />
-      <Section8 />
+      <Section10 />
       <Section11 />
       <Section12 />
       <Section13 />

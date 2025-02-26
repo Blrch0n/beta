@@ -27,7 +27,7 @@ const Header = () => {
               {Navbar_data.map((item, index) => (
                 <li
                   href={`/${item}`}
-                  className="px-[20px] py-3 cursor-pointer"
+                  className="px-[20px] py-3 cursor-pointer text-red-950"
                   key={index}
                 >
                   {item}

@@ -1,171 +1,121 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { FaFacebookF, FaTwitter, FaLinkedin } from "react-icons/fa";
 
-const CardNavigation = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cards = [
-    {
-      id: 1,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 2,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 3,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 4,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 5,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 6,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 7,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 8,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-    {
-      id: 9,
-      header: "Shaharia Parvez",
-      job: "UX/UI Designer",
-      fb_url: "/",
-      twitter_url: "/",
-      linkedin_url: "/",
-      paragraph:
-        "Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do",
-      image: "/member-1.png",
-    },
-  ];
+// Dummy team members data
+const teamMembers = [
+  {
+    name: "Shaharia Parvez",
+    role: "UX/UI DESIGNER",
+    image: "/member-1.png",
+  },
+  {
+    name: "Josifin Sense",
+    role: "UX/UI DESIGNER",
+    image: "/member-2.png",
+  },
+  {
+    name: "Shaharia Parvez",
+    role: "UX/UI DESIGNER",
+    image: "/member-3.png",
+  },
+  {
+    name: "Jane Smith",
+    role: "UX/UI DESIGNER",
+    image: "/member-1.png",
+  },
+  {
+    name: "Mike Tyson",
+    role: "UX/UI DESIGNER",
+    image: "/member-2.png",
+  },
+  {
+    name: "Emily Rose",
+    role: "UX/UI DESIGNER",
+    image: "/member-3.png",
+  },
+  {
+    name: "Chris Hemsworth",
+    role: "UX/UI DESIGNER",
+    image: "/member-1.png",
+  },
+  {
+    name: "Scarlett Johansson",
+    role: "UX/UI DESIGNER",
+    image: "/member-2.png",
+  },
+  {
+    name: "John Doe",
+    role: "UX/UI DESIGNER",
+    image: "/member-3.png",
+  },
+];
 
-  const cardsPerPage = 3;
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+export default function TeamGrid() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(teamMembers.length / itemsPerPage);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPages) % totalPages);
-  };
-
-  const visibleCards = cards.slice(
-    currentIndex * cardsPerPage,
-    (currentIndex + 1) * cardsPerPage
-  );
+  // Get current page's items
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = teamMembers.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="flex w-[1140px] h-full flex-col items-center justify-center p-4">
-      {/* Cards Container */}
-      <div className="w-full max-w-4xl overflow-hidden">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {cards.map((card) => (
-            <div key={card.id} className="flex-shrink-0 w-full md:w-1/3 p-4">
-              <div className="bg-white p-6 rounded-lg shadow-md border flex justify-between border-gray-200 text-center">
-                <div className="flex w-full h-full bg-red-50"></div>
-                <img src="/member-1.png"></img>
+    <section
+      className="w-full h-fit pt-[100px] pb-[50px]"
+      style={{ backgroundImage: "url(/shape.jpg)" }}
+    >
+      <div className="w-[1140px] mx-auto">
+        {/* Card Grid */}
+        <div className="grid grid-cols-3 gap-6">
+          {currentItems.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg hover:shadow-lg duration-1000 border-[1px] border-[#f3f3f3] overflow-hidden text-start p-5 w-full relative"
+            >
+              <div className="absolute top-0 right-0">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-auto h-full object-cover"
+                />
               </div>
+              <h3 className="text-gray-800 font-bold text-lg">{member.name}</h3>
+              <p className="text-orange-500 font-semibold">{member.role}</p>
+              <div className="flex space-x-3 mt-2 text-gray-500">
+                <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
+                  <FaFacebookF className="hover:text-orange-500" />
+                </div>
+                <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
+                  <FaTwitter className="hover:text-orange-500 cursor-pointer" />
+                </div>
+                <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
+                  <FaLinkedin className="hover:text-orange-500 cursor-pointer" />
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mt-3">
+                Lorem ipsum dolor sit<br></br> amet, consectetur<br></br>{" "}
+                adipiscing elit, sed do.
+              </p>
             </div>
           ))}
         </div>
+
+        {/* Pagination Controls */}
+        <div className="flex justify-center mt-6">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index + 1)}
+              className={`
+       h-[5px] mx-2 rounded-full duration-200
+      ${currentPage === index + 1 ? "bg-orange-500" : "bg-gray-300"}
+    `}
+              style={{ width: currentPage === index + 1 ? "30px" : "10px" }}
+            />
+          ))}
+        </div>
       </div>
-      <div className="mt-6 space-x-4">
-        <button
-          onClick={handlePrev}
-          disabled={currentIndex === 0}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300 disabled:cursor-not-allowed"
-        >
-          Previous
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={currentIndex === totalPages - 1}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300 disabled:cursor-not-allowed"
-        >
-          Next
-        </button>
-      </div>
-    </div>
+    </section>
   );
-};
-const Section8 = () => {
-  return (
-    <div
-      className="h-[472px] w-full bg-gray-100 flex flex-col items-center justify-center p-4 bg-no-repeat bg-cover"
-      style={{ backgroundImage: 'url("/shape.jpg") ' }}
-    >
-      <CardNavigation />
-    </div>
-  );
-};
-export default Section8;
+}
