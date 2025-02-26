@@ -32,7 +32,12 @@ const Section13 = () => {
     >
       <div className="w-[1140px] h-full flex flex-row gap-[30px] justify-between">
         <div className="flex flex-col w-[445px] h-fit gap-5">
-          <img src="./logo_4.png" className="w-[109px] h-[40px]" alt="Logo" />
+          <img
+            src="./logo_4.png"
+            className="w-[109px] h-[40px] cursor-pointer"
+            href="/"
+            alt="Logo"
+          />
           <p className="text-[#999999]">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -74,11 +79,11 @@ const Section13 = () => {
           <h2 className="text-[20px] font-montserrat font-semibold">
             External Links
           </h2>
-          <ul className="w-full h-fit flex flex-col gap-5 font-mulish text-[16px] text-[#999999] relative">
+          <ul className="w-full h-fit flex flex-col gap-5 z-20 font-mulish text-[16px] text-[#999999] relative">
             {Section13_data.map((data, index) => (
               <li
                 key={index}
-                className={`hover:text-white cursor-pointer relative ${
+                className={`hover:text-white cursor-pointer relative z-20 ${
                   data.number === clickedName ? "text-white" : ""
                 }`}
                 onClick={() => setClickedName(data.number)}
@@ -91,7 +96,7 @@ const Section13 = () => {
                 <a>{data.name}</a>
               </li>
             ))}
-            <span className="absolute w-[1px] h-full bg-[#999999] top-0 left-0"></span>
+            <span className="absolute w-[1px] h-[90%] top-1/2 -translate-y-1/2 bg-[#999999] left-[-1px] z-0"></span>
           </ul>
         </div>
       </div>

@@ -1,3 +1,6 @@
+import React from "react";
+import { BsThreeDots } from "react-icons/bs";
+
 const images = [
   { src: "/image5.png", alt: "image5", colSpan: 2, rowSpan: 1 },
   { src: "/image4.png", alt: "image4", colSpan: 1, rowSpan: 1 },
@@ -13,17 +16,28 @@ const Section5 = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`w-full h-auto`}
+          className="relative group"
           style={{
-            gridColumn: `span ${image.colSpan}/span ${image.colSpan}`,
-            gridRow: `span ${image.rowSpan}/span ${image.rowSpan}`,
+            gridColumn: `span ${image.colSpan} / span ${image.colSpan}`,
+            gridRow: `span ${image.rowSpan} / span ${image.rowSpan}`,
           }}
         >
           <img
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
             src={image.src}
             alt={image.alt}
           />
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[90%] p-4 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-sm text-purple-600 block mb-1">
+              look, life, good
+            </span>
+            <h3 className="text-lg font-bold text-black mb-1">
+              portfolio title or details
+            </h3>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 border border-purple-600 rounded-full w-8 h-8 flex items-center justify-center">
+              <BsThreeDots className="text-purple-600" />
+            </div>
+          </div>
         </div>
       ))}
     </section>

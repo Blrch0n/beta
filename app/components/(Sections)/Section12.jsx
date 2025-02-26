@@ -37,14 +37,14 @@ const Section12 = () => {
               Follows:
             </h3>
             <div className="flex flex-row gap-5">
-              <span className="w-fit h-fit p-[10px] rounded-full border-[#999999] border-[1px]">
-                <FaFacebook size={"16px"} color="#7b7b7b" />
+              <span className="w-fit h-fit p-[10px] group cursor-pointer rounded-full border-[#999999] border-[1px]">
+                <FaFacebook className="text-[#7b7b7b] text-[16px] group-hover:text-[#ff9607]" />
               </span>
-              <span className="w-fit h-fit p-[10px] rounded-full border-[#999999] border-[1px]">
-                <FaTwitter size={"16px"} color="#7b7b7b" />
+              <span className="w-fit h-fit p-[10px] group cursor-pointer rounded-full border-[#999999] border-[1px]">
+                <FaTwitter className="text-[#7b7b7b] text-[16px] group-hover:text-[#ff9607]" />
               </span>
-              <span className="w-fit h-fit p-[10px] rounded-full border-[#999999] border-[1px]">
-                <FaLinkedin size={"16px"} color="#7b7b7b" />
+              <span className="w-fit h-fit p-[10px] group cursor-pointer rounded-full border-[#999999] border-[1px]">
+                <FaLinkedin className="text-[#7b7b7b] text-[16px] group-hover:text-[#ff9607]" />
               </span>
             </div>
           </div>
@@ -66,8 +66,8 @@ const Section12 = () => {
             placeholder="Your Message"
             className="w-full p-5 h-[211px] rounded-[10px]"
           ></textarea>
-          <button className="px-[60px] py-[20px] rounded-full bg-white overflow-hidden text-black border-[1px] relative border-[#ff9a00]">
-            <span className="absolute top-0 right-[6px] h-10 w-10 flex items-center justify-center rounded-full rounded-tl-none bg-[#ff9a00]">
+          <button className="group px-[60px] py-[20px] rounded-full bg-white overflow-hidden text-black border-[1px] relative border-[#ff9a00]">
+            <span className="absolute top-0 right-[6px] h-10 w-10 flex items-center group-hover:translate-y-[-40px] duration-200 justify-center rounded-full rounded-tl-none bg-[#ff9a00]">
               <GrSend color="white" size={"18px"} />
             </span>
             SUBMIT

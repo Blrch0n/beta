@@ -6,18 +6,60 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { IoMdTime } from "react-icons/io";
 
 const services = [
-  { icon: <FaCodeBranch size="32px" color="#b47beb" />, title: "Development" },
-  { icon: <HiPaintBrush size="32px" color="#b47beb" />, title: "Design" },
   {
-    icon: <IoIosPhonePortrait size="32px" color="#b47beb" />,
+    icon: (
+      <FaCodeBranch
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
+    title: "Development",
+  },
+  {
+    icon: (
+      <HiPaintBrush
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
+    title: "Design",
+  },
+  {
+    icon: (
+      <IoIosPhonePortrait
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
     title: "Mobile Apps",
   },
-  { icon: <IoHelpBuoy size="32px" color="#b47beb" />, title: "Support" },
   {
-    icon: <AiOutlineGlobal size="32px" color="#b47beb" />,
+    icon: (
+      <IoHelpBuoy
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
+    title: "Support",
+  },
+  {
+    icon: (
+      <AiOutlineGlobal
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
     title: "SEO & Marketing",
   },
-  { icon: <IoMdTime size="32px" color="#b47beb" />, title: "Time Management" },
+  {
+    icon: (
+      <IoMdTime
+        className="text-[#b47beb] transition-colors duration-300 group-hover:text-white"
+        size="32px"
+      />
+    ),
+    title: "Time Management",
+  },
 ];
 
 const Section6 = () => {
@@ -39,13 +81,16 @@ const Section6 = () => {
             </span>
           </h3>
         </div>
+
         <div className="grid grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="border-[#999] border-2 relative overflow-hidden flex flex-col gap-3 rounded-xl p-8 bg-white shadow-md transition-transform hover:scale-105"
+              // Use "group" here so children can detect hover
+              className="group border-[#999] border-2 relative overflow-hidden flex flex-col gap-3 rounded-xl p-8 bg-white shadow-md transition-transform hover:scale-105"
             >
-              <div className="w-[60px] h-[60px] absolute top-0 right-0 shadow-md bg-[#f7f7f7] rounded-full rounded-tr-none flex items-center justify-center">
+              <div className="w-[60px] h-[60px] absolute top-0 right-0 shadow-md bg-[#f7f7f7] rounded-full group-hover:bg-[#a762e9] duration-300 rounded-tr-none flex items-center justify-center">
+                {/* Icon that changes color on hover */}
                 {service.icon}
               </div>
               <h4 className="text-[22px] font-montserrat font-semibold text-black">

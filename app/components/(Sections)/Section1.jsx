@@ -1,4 +1,5 @@
 import React from "react";
+// import { useRevealOnce } from "../(Main_structure)/useRevealOnce";
 
 const Section1 = () => {
   return (
