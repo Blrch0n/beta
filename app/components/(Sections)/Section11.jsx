@@ -47,7 +47,7 @@ const Section11 = () => {
               className="w-full h-[280px] flex flex-col relative rounded-[15px] items-start overflow-hidden justify-between group z-10"
             >
               <img src={post.image} className="w-full" alt="Blog Post" />
-              <div className="absolute flex flex-col bottom-0 p-[25px] text-black right-0 w-full h-[156px] group-hover:h-[228px] transition-all border-[#f2f2f2] border-[1px] duration-300 rounded-[15px] bg-white">
+              <div className="absolute flex flex-col bottom-0 p-[25px] text-black right-0 w-full h-[156px] group-hover:h-[228px] transition-all border-[#f2f2f2] border-[1px] duration-500 rounded-[15px] bg-white">
                 <div className="flex flex-row justify-between">
                   <a>{post.date}</a>
                   <a>{post.author}</a>

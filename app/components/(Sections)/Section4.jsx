@@ -4,7 +4,7 @@ import { BsThreeDots } from "react-icons/bs";
 const Section4 = () => {
   return (
     <section className="w-full h-fit flex items-center bg-white justify-center pt-[100px]">
-      <div className="w-[1140px] h-[193px] relative flex flex-row items-center justify-between">
+      <div className="w-[1140px] h-[193px] max-[1200px]:px-20 relative flex flex-row items-center justify-between">
         <img src="/Portfolio-copy.jpg" className="absolute top-0 right-0"></img>
         <div className="w-fit h-full flex flex-col">
           <h2 className="text-[18px] font-bold font-montserrat text-[rgb(247,131,170)]">

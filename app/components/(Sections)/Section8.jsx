@@ -84,16 +84,16 @@ export default function TeamGrid() {
               <p className="text-orange-500 font-semibold">{member.role}</p>
               <div className="flex space-x-3 mt-2 text-gray-500">
                 <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
-                  <FaFacebookF className="hover:text-orange-500" />
+                  <FaFacebookF className="hover:text-orange-500 cursor-pointer duration-300" />
                 </div>
                 <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
-                  <FaTwitter className="hover:text-orange-500 cursor-pointer" />
+                  <FaTwitter className="hover:text-orange-500 cursor-pointer duration-300" />
                 </div>
                 <div className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-full bg-slate-200">
-                  <FaLinkedin className="hover:text-orange-500 cursor-pointer" />
+                  <FaLinkedin className="hover:text-orange-500 cursor-pointer duration-300" />
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mt-3">
+              <p className="text-[#999999] font-mulish font-medium text-sm mt-3">
                 Lorem ipsum dolor sit<br></br> amet, consectetur<br></br>{" "}
                 adipiscing elit, sed do.
               </p>

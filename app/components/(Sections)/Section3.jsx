@@ -8,12 +8,12 @@ const Section3 = () => {
   return (
     <section
       ref={ref}
-      className={`w-full h-[403px] flex bg-slate-500 justify-center items-center bg-cover transition-opacity duration-700 ${
+      className={`w-full h-[403px] max-[1200px]:h-[283px] max-[1200px]:px-20 flex bg-slate-500 justify-center items-center bg-cover object-cover transition-opacity duration-700 ${
         revealed ? "opacity-100" : "opacity-0"
       }`}
       style={{ backgroundImage: "url(/video-promo.jpg)" }}
     >
-      <div className="w-[1140px] h-full flex flex-row justify-between items-center">
+      <div className="max-w-[1140px] w-full h-full flex flex-row justify-between items-center">
         <h2 className="font-bold text-[32px] font-montserrat">
           we create successful digital
           <br /> products

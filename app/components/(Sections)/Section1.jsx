@@ -4,10 +4,10 @@ import React from "react";
 const Section1 = () => {
   return (
     <section
-      className="w-full h-[1000px] flex items-center justify-center relative bg-no-repeat bg-cover"
+      className="w-full h-[1000px] flex items-center justify-center relative bg-no-repeat bg-cover max-[1200px]:h-[873px]"
       style={{ backgroundImage: "url(/banner_copy.png" }}
     >
-      <div className="relavite w-[1140px] h-full relative justify-end flex ">
+      <div className="relavite max-w-[1140px] w-full h-full relative justify-end flex ">
         <div className="absolute left-0 bottom-0 z-10">
           <img src={"/girl.png"} width={520} height={824} alt="girl" />
         </div>
