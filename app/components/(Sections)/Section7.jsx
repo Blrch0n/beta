@@ -1,4 +1,5 @@
 import { FaPlayCircle } from "react-icons/fa";
+
 const section7_data = [
   "Beautiful and easy to understand UI, professional animations",
   "Theme advantages are pixel perfect design & clear code delivered",
@@ -9,21 +10,30 @@ const section7_data = [
 const Section7 = () => {
   return (
     <div
-      className="w-full h-fit p-[100px] flex justify-center align-center bg-no-repeat bg-cover"
+      className="w-full h-fit p-[100px] flex justify-center items-center bg-no-repeat bg-cover max-md:p-[50px] max-sm:p-[20px]"
       style={{ backgroundImage: "url(/circle1.jpg)" }}
     >
-      <div className="max-w-[1140px] w-full max-[1200px]:px-20 h-full flex flex-row gap-[30px] ">
-        <img src="/pc.png" className="w-[540px] h-[391px]"></img>
-        <div className="w-full h-full flex flex-col gap-8">
-          <h3 className="text-[32px] font-montserrat font-extrabold">
-            Unique,truly
-            <span className="text-[#ff9a00]"> responsive and functiona </span>
+      <div className="max-w-[1140px] w-full max-[1200px]:px-20 h-full flex flex-col lg:flex-row gap-[30px]">
+        <div className="flex-1 flex justify-center w-full h-full">
+          <img
+            src="/pc.png"
+            className="w-full max-w-[540px] lg:max-w-[450px] max-[1200px]:max-w-[400px] h-auto object-contain"
+            alt="Responsive PC"
+          />
+        </div>
+
+        <div className="flex-1 flex flex-col gap-8">
+          <h3 className="text-[32px] font-montserrat font-extrabold leading-tight">
+            Unique, truly{" "}
+            <span className="text-[#ff9a00]">responsive and functional</span>{" "}
             websites
           </h3>
+
           <p className="text-[16px] font-mulish font-medium">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore.
           </p>
+
           <div className="w-full h-fit flex flex-col gap-6">
             {section7_data.map((item, index) => (
               <div key={index} className="relative ml-3">
@@ -35,13 +45,14 @@ const Section7 = () => {
               </div>
             ))}
           </div>
+
           <a
             href="/"
-            className="text-black bg-[#fff] overflow-hidden group relative w-fit h-fit py-[20px] rounded-full px-[60px] mt-2 border-2 border-[#ff9a00]"
+            className="text-black bg-[#fff] overflow-hidden group relative w-fit h-fit py-[20px] rounded-full px-[60px] mt-2 border-2 border-[#ff9a00] transition-all duration-300 hover:bg-[#ff9a00] hover:text-white"
           >
             LEARN MORE
-            <span className=" rounded-full flex items-center justify-center rounded-tl-none absolute top-0 group-hover:top-[-40px] duration-300 right-2 bg-[#ff9a00] w-10 h-10">
-              <FaPlayCircle size={"16px"} color={"#ffffff "} />
+            <span className="rounded-full flex items-center justify-center absolute top-0 group-hover:top-[-40px] duration-300 right-2 bg-[#ff9a00] w-10 h-10">
+              <FaPlayCircle size={16} color="#ffffff" />
             </span>
           </a>
         </div>

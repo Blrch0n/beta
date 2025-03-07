@@ -69,7 +69,6 @@ const Section6 = () => {
       style={{ backgroundImage: "url(/service_bg.jpg)" }}
     >
       <div className="w-[1140px] max-[1200px]:px-20 flex flex-col items-start">
-        {/* Header */}
         <div className="mb-10">
           <h4 className="text-[#f783aa] text-lg font-bold font-montserrat">
             Our Services
@@ -82,15 +81,13 @@ const Section6 = () => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-6 w-full h-fit max-[992px]:grid-cols-2">
           {services.map((service, index) => (
             <div
               key={index}
-              // Use "group" here so children can detect hover
               className="group border-[#999] border-2 relative overflow-hidden flex flex-col gap-3 rounded-xl p-8 bg-white shadow-md transition-transform hover:scale-105"
             >
               <div className="w-[60px] h-[60px] absolute cursor-pointer top-0 right-0 shadow-md bg-[#f7f7f7] rounded-full group-hover:bg-[#a762e9] duration-300 rounded-tr-none flex items-center justify-center">
-                {/* Icon that changes color on hover */}
                 {service.icon}
               </div>
               <h4 className="text-[22px] font-montserrat font-semibold text-black">
