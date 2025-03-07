@@ -1,5 +1,6 @@
 import Section1 from "../components/(About Us)/Section1";
 import Section2 from "../components/(About Us)/Section2";
+import Section3 from "../components/(About Us)/Section3";
 import Header from "../components/(Main_structure)/Header";
 
 function generateStaticParams() {}
@@ -10,6 +11,7 @@ export default function Page() {
       <Header />
       <Section1 />
       <Section2 />
+      <Section3 />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 "use clients";
 import React from "react";
-import LinearWithValueLabel from "../(Mini)/linear";
+import SkillsSection from "../(Mini)/SkillSection";
 
 const section2_data = [
   { label: "UI/UX DESIGN", percentage: 75 },
@@ -36,8 +36,9 @@ const Section2 = () => {
             Contact Us
           </button>
           <hr className="bg-[#999] w-full h-[1px]"></hr>
-          <LinearWithValueLabel progress={75} />
-          <div className="w-full h-fit grid grid-cols-2 "></div>
+          <div className="w-full h-fit ">
+            <SkillsSection />
+          </div>
         </div>
         <div className="w-full h-full flex flex-col items-center"></div>
       </div>

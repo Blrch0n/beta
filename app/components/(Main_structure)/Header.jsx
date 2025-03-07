@@ -41,22 +41,22 @@ const Header = () => {
   // Handle screen resize
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000);
+      setIsMobile(innerWidth <= 1000);
     };
 
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    addEventListener("resize", handleResize);
+    return () => removeEventListener("resize", handleResize);
   }, []);
 
   // Handle navbar visibility on scroll
   useEffect(() => {
     const toggleVisibility = () => {
-      setVisible(window.scrollY > 200);
+      setVisible(scrollY > 200);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    addEventListener("scroll", toggleVisibility);
+    return () => removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (

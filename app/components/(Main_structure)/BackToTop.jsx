@@ -8,7 +8,7 @@ const BackToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (scrollY > 300) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -16,22 +16,22 @@ const BackToTop = () => {
     };
 
     const handlePosition = () => {
-      setIsMobile(window.innerWidth <= 1200);
+      setIsMobile(innerWidth <= 1200);
     };
 
     handlePosition();
 
-    window.addEventListener("resize", handlePosition);
-    window.addEventListener("scroll", toggleVisibility);
+    addEventListener("resize", handlePosition);
+    addEventListener("scroll", toggleVisibility);
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-      window.removeEventListener("resize", handlePosition);
+      removeEventListener("scroll", toggleVisibility);
+      removeEventListener("resize", handlePosition);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
+    scrollTo({
       top: 0,
       behavior: "smooth",
     });
