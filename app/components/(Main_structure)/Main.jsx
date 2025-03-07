@@ -16,7 +16,7 @@ import Section10 from "../(Sections)/Section10";
 
 const Main = () => {
   return (
-    <div className="flex flex-col items-center justify-center relative h-fit w-full">
+    <div className="flex flex-col items-center justify-center relative bg-white h-fit w-full">
       <Section1 />
       <Section2 />
       <Section3 />

@@ -27,14 +27,14 @@ const Section13 = () => {
 
   return (
     <section
-      className="w-full p-[100px] h-[501px] flex justify-center items-center"
+      className="w-full p-[100px] max-[800px]:p-10 min-h-[501px] flex justify-center items-center"
       style={{ backgroundImage: "url(/footer-bg1.jpg)" }}
     >
-      <div className="w-[1140px] h-full flex flex-row gap-[30px] justify-between">
-        <div className="flex flex-col w-[445px] h-fit gap-5">
+      <div className="max-w-[1140px] w-full h-full max-[800px]:flex-col  flex flex-row gap-[30px] justify-between">
+        <div className="flex flex-col max-w-[445px] w-full h-fit gap-5">
           <img
             src="./logo_4.png"
-            className="w-[109px] h-[40px] cursor-pointer"
+            className="max-w-[109px] max-h-[40px] w-full h-auto cursor-pointer"
             href="/"
             alt="Logo"
           />
@@ -59,7 +59,7 @@ const Section13 = () => {
             </button>
           </form>
         </div>
-        <div className="flex w-[475px] h-fit flex-col gap-5">
+        <div className="flex max-w-[475px] w-full h-fit flex-col gap-5">
           <h2 className="text-[20px] font-montserrat font-semibold">
             Instagram Feeds
           </h2>

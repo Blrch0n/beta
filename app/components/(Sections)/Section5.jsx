@@ -2,25 +2,51 @@ import React from "react";
 import { BsThreeDots } from "react-icons/bs";
 
 const images = [
-  { src: "/image5.png", alt: "image5", colSpan: 2, rowSpan: 1 },
-  { src: "/image4.png", alt: "image4", colSpan: 1, rowSpan: 1 },
-  { src: "/image6.png", alt: "image6", colSpan: 1, rowSpan: 2 },
-  { src: "/image3.png", alt: "image3", colSpan: 1, rowSpan: 1 },
-  { src: "/image2.png", alt: "image2", colSpan: 1, rowSpan: 1 },
-  { src: "/image1.png", alt: "image1", colSpan: 1, rowSpan: 1 },
+  {
+    src: "/image5.png",
+    alt: "image5",
+    colSpan: "col-span-2 max-[766px]:col-span-1",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/image4.png",
+    alt: "image4",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/image6.png",
+    alt: "image6",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-2 max-[576px]:row-span-1",
+  },
+  {
+    src: "/image3.png",
+    alt: "image3",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/image2.png",
+    alt: "image2",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-1",
+  },
+  {
+    src: "/image1.png",
+    alt: "image1",
+    colSpan: "col-span-1",
+    rowSpan: "row-span-1",
+  },
 ];
 
 const Section5 = () => {
   return (
-    <section className="w-full h-fit grid grid-cols-4 grid-rows-2">
+    <section className="w-full h-fit grid grid-cols-4 max-[766px]:grid-cols-2 max-[766px]:grid-rows-4 max-[576px]:grid-cols-1 max-[576px]:grid-rows-8 grid-rows-2">
       {images.map((image, index) => (
         <div
           key={index}
-          className="relative group"
-          style={{
-            gridColumn: `span ${image.colSpan} / span ${image.colSpan}`,
-            gridRow: `span ${image.rowSpan} / span ${image.rowSpan}`,
-          }}
+          className={`relative group ${image.colSpan} ${image.rowSpan}`}
         >
           <img
             className="w-full h-full object-cover"

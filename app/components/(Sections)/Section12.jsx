@@ -6,22 +6,22 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Section12 = () => {
   return (
-    <section className="w-full h-[609.6px] flex overflow-hidden justify-center relative items-center">
-      <span className="absolute top-0 left-0 w-[40%] h-full -z-[10]">
+    <section className="w-full min-h-[609.6px] h-fit py-20 flex overflow-hidden justify-center relative items-center">
+      <span className="absolute top-0 left-0 w-[40%] max-[992px]:w-full h-full -z-[10]">
         <img
           src="/image_form.jpg"
           className="w-full h-full object-cover"
           alt="background"
         ></img>
       </span>
-      <div className="w-[1140px] h-fit flex flex-row">
-        <div className="flex flex-col gap-5 w-[517px] h-fit">
-          <div className="flex flex-col gap-[10px] items-start">
+      <div className="max-w-[1140px] w-full max-[1200px]:px-20 h-fit flex flex-row max-[992px]:flex-col gap-20">
+        <div className="flex flex-col gap-5 w-full max-w-[517px] h-fit">
+          <div className="flex flex-col w-full gap-[10px] items-start">
             <h3 className="text-[24px] font-bold font-montserrat text-black">
               Address:
             </h3>
             <p className="text-[16px] font-medium font-mulish text-[#999999]">
-              29 North Redwood Court,Wantagh,<br></br> NY 11793
+              29 North Redwood Court,Wantagh, NY 11793
             </p>
           </div>
           <div className="flex flex-col gap-[10px] items-start">
@@ -29,7 +29,7 @@ const Section12 = () => {
               Information:
             </h3>
             <p className="text-[16px] font-medium font-mulish text-[#999999]">
-              info@portomega.com <br></br> (714)893-3884
+              info@portomega.com (714)893-3884
             </p>
           </div>
           <div className="flex h-fit w-full flex-col gap-[10px] items-start">
@@ -49,8 +49,8 @@ const Section12 = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6 items-start">
-          <div className="w-full gap-8 flex flex-row h-fit">
+        <div className="flex flex-col gap-6 items-start max-[992px]:items-center">
+          <div className="w-full gap-8 grid grid-cols-2 max-[992px]:grid-cols-1 h-fit">
             <input
               type="text"
               placeholder="Your Name"

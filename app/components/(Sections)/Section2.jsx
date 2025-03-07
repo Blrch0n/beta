@@ -24,9 +24,12 @@ const Section2 = () => {
       className="w-full min-h-[932px] h-fit flex items-center justify-center bg-white overflow-hidden relative]"
       style={{ backgroundImage: "url(/service_bg.jpg  )" }}
     >
-      <div className="max-w-[1140px] w-full max-[992px]:flex-col max-[992px]:py-20 h-full flex flex-row items-center justify-between">
-        <img src="/skill.png" className="w-[635px] h-[607px]"></img>
-        <div className="w-[475px] h-full flex flex-col items-start justify-center">
+      <div className="max-w-[1140px] w-full max-[992px]:flex-col max-[992px]:py-20 px-5 h-full flex flex-row items-center justify-between">
+        <img
+          src="/skill.png"
+          className="max-w-[635px] max-h-[607px] w-full h-auto"
+        ></img>
+        <div className="max-w-[475px] w-full h-full flex flex-col items-start justify-center">
           <div className="w-full h-full flex flex-col gap-5 items-start justify-center">
             <h4 className="text-[#f783aa] text-lg font-bold font-montserrat">
               ABOUT US

@@ -29,18 +29,18 @@ const blogPosts = [
 
 const Section11 = () => {
   return (
-    <section className="w-full h-[681px] bg-white p-[100px] relative flex justify-center items-center">
+    <section className="w-full min-h-[681px] h-fit bg-white p-[100px] max-[766px]:p-0 max-[766px]:py-20 relative flex justify-center items-center">
       <span className="w-[336px] h-[347px] absolute top-[100px] -left-[150px]">
         <img src="/dot_01.png" alt="Decorative Dots" />
       </span>
-      <div className="w-[1140px] h-full flex flex-col gap-8">
+      <div className="max-w-[1140px] w-full max-[1200px]:px-10 h-full flex flex-col gap-8">
         <div className="font-montserrat font-bold">
           <h4 className="text-[18px] text-[#f783aa]">LATEST NEWS</h4>
           <h3 className="text-[32px] text-black font-extrabold">
             publish what <span className="text-[#a762e9]">you think</span>
           </h3>
         </div>
-        <div className="w-full h-fit flex justify-between items-center gap-7">
+        <div className="w-full h-fit grid grid-cols-3 gap-10 max-[992px]:grid-cols-2 max-[766px]:grid-cols-1">
           {blogPosts.map((post, index) => (
             <div
               key={index}

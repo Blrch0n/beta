@@ -121,15 +121,17 @@ const Header = () => {
             </div>
           )}
 
-          {isMobile && menuOpen && (
+          {isMobile && (
             <div
-              className="fixed top-0 right-0 w-full h-full shadow-md p-4 flex flex-col justify-center"
+              className={`fixed top-0 right-0 w-full h-screen shadow-md p-4 flex flex-col justify-center transition-transform duration-300 ${
+                menuOpen ? "translate-x-0" : "translate-x-full"
+              }`}
               style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
             >
-              <div className="absolute top-10 right-10 p-4 cursor-pointer">
+              <div className="absolute top-3 right-10 p-4 cursor-pointer">
                 <IoCloseOutline
-                  className="hover:text-[#ff9a00] text-[#ffffffb5] text-[40px] duration-300"
-                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="hover:text-[#ff9a00] text-[#ffffffb5] text-[60px] duration-300"
+                  onClick={() => setMenuOpen(false)}
                 />
               </div>
               {Navbar_data.map((item, index) => (

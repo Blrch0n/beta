@@ -13,7 +13,7 @@ const Section7 = () => {
       className="w-full h-fit p-[100px] flex justify-center items-center bg-no-repeat bg-cover max-md:p-[50px] max-sm:p-[20px]"
       style={{ backgroundImage: "url(/circle1.jpg)" }}
     >
-      <div className="max-w-[1140px] w-full max-[1200px]:px-20 h-full flex flex-col lg:flex-row gap-[30px]">
+      <div className="max-w-[1140px] w-full max-[1200px]:px-20  h-full flex flex-col lg:flex-row gap-[30px]">
         <div className="flex-1 flex justify-center w-full h-full">
           <img
             src="/pc.png"
@@ -22,7 +22,7 @@ const Section7 = () => {
           />
         </div>
 
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex-1 flex flex-col gap-8 w-full h-fit">
           <h3 className="text-[32px] font-montserrat font-extrabold leading-tight">
             Unique, truly{" "}
             <span className="text-[#ff9a00]">responsive and functional</span>{" "}
