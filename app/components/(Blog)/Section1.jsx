@@ -60,11 +60,11 @@ const news_data = [
 
 const Section1_2 = () => {
   return (
-    <section className="w-full h-fit felx items-center justify-center">
+    <section className="w-full h-fit flex items-center justify-center py-[100px] bg-white">
       <div className="max-w-[1140px] w-full h-fit grid grid-cols-3 gap-[50px]">
         {news_data.map((data, index) => (
           <div
-            className="max-w-[350px] min-h-[350px] w-full relative h-full rounded-xl overflow-hidden"
+            className="max-w-[350px] min-h-[350px] w-full relative h-full rounded-xl overflow-hidden shadow-md"
             key={index}
           >
             <div className="w-full h-auto">
@@ -73,7 +73,7 @@ const Section1_2 = () => {
                 alt="blog"
                 className="w-full h-auto object-cover"
               />
-              <div className="w-full h-fit flex flex-col gap-2 px-[30px] py-[40px] absolute bottom-0 right-0   bg-white rounded-[15px]">
+              <div className="w-full h-fit flex flex-col gap-2 p-[30px] absolute bottom-0 right-0   bg-white rounded-[15px]">
                 <span>
                   <p>{data.date}</p>
                   <h2>{data.author}</h2>
