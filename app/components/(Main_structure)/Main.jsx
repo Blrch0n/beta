@@ -11,7 +11,6 @@ import Section9 from "../(Sections)/Section9";
 import Section11 from "../(Sections)/Section11";
 import Section12 from "../(Sections)/Section12";
 import Section13 from "../(Sections)/Section13";
-import BackToTop from "./BackToTop";
 import Section10 from "../(Sections)/Section10";
 
 const Main = () => {
@@ -30,7 +29,6 @@ const Main = () => {
       <Section11 />
       <Section12 />
       <Section13 />
-      <BackToTop />
     </div>
   );
 };

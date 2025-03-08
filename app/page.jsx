@@ -1,6 +1,7 @@
 import Header from "./components/(Main_structure)/Header";
 import Footer from "./components/(Main_structure)/Footer";
 import Main from "./components/(Main_structure)/Main";
+import BackToTop from "./components/(Main_structure)/BackToTop";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Main />
       <Footer />
+      <BackToTop />
     </section>
   );
 }
