@@ -11,13 +11,13 @@ const section2_data = [
 
 const Section2 = () => {
   return (
-    <section className="w-full h-fit flex items-center justify-center overflow-hidden">
+    <section className="w-full h-fit flex py-[100px] px-[50px] items-center justify-center overflow-hidden">
       <div className="max-w-[1140px] flex flex-row w-full h-[600px] relative">
         <img
           src="./about-4-bg1.png"
           className="w-auto absolute h-[150%] bottom-[-300px] right-[-100px]"
         ></img>
-        <div className="w-full h-full flex flex-col items-center">
+        <div className="w-full h-full flex flex-col justify-between items-start">
           <div>
             <h3 className="text-[18px] font-bold font-montserrat text-[#f783aa]">
               ABOUT US

@@ -12,7 +12,7 @@ const Page = () => {
   return (
     <div className="w-full h-fit flex flex-col">
       <Header />
-      <Section1 />
+      <Section1 children={"Blog"} />
       <Section1_2 />
       <AboutUsFooter />
       <BackToTop />

@@ -10,9 +10,9 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="w-full h-fit flex flex-col">
+    <div className="w-full h-fit flex flex-col bg-white">
       <Header />
-      <Section1 />
+      <Section1 children={"Portfolio Details"} />
       <Detail_section1 />
       <hr></hr>
       <Detail_section2 />

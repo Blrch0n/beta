@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <section className="w-full h-fit bg-white flex flex-col items-center">
       <Header />
-      <Section1 />
+      <Section1 children={"Contact Us"} />
       <GoogleMapComponent />
       <Section12 />
       <Section4 />

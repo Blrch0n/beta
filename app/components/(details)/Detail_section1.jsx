@@ -14,21 +14,21 @@ const labels = [
     paragraphy: [
       {
         icon: (
-          <span className="w-[45px] h-[45px] rounded-full bg-[#7b7b7b] flex items-center justify-center">
+          <span className="w-[45px] h-[45px] rounded-full bg-[#f4f4f4] flex items-center justify-center">
             <FaFacebook />
           </span>
         ),
       },
       {
         icon: (
-          <span className="w-[45px] h-[45px] rounded-full bg-[#7b7b7b] flex items-center justify-center">
+          <span className="w-[45px] h-[45px] rounded-full bg-[#f4f4f4] flex items-center justify-center">
             <FaTwitter />
           </span>
         ),
       },
       {
         icon: (
-          <span className="w-[45px] h-[45px] rounded-full bg-[#7b7b7b] flex items-center justify-center">
+          <span className="w-[45px] h-[45px] rounded-full bg-[#f4f4f4] flex items-center justify-center">
             <FaLinkedin />
           </span>
         ),
@@ -39,9 +39,9 @@ const labels = [
 
 const Detail_section1 = () => {
   return (
-    <section className="w-full h-fit flex items-center justify-center py-[100px]">
+    <section className="w-full h-fit flex items-center justify-center py-[100px] text-[#999]">
       <div className="max-w-[1140px] w-full flex flex-col h-fit">
-        <div className="w-full h-fit flex flex-row gap-[50px]">
+        <div className="w-full h-fit py-[50px] flex flex-row gap-[50px]">
           <div className="w-full h-[680px]">
             <img
               src="/image6.png"
@@ -49,10 +49,14 @@ const Detail_section1 = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-full h-fit flex flex-col">
+          <div className="w-full h-fit flex flex-col gap-6">
             <div className="w-full h-fit flex flex-col gap-5">
-              <h1>Take a look around our portfolio.</h1>
-              <p>Portfolio, Look, Life, Good</p>
+              <h1 className="text-[32px] text-black font-extrabold font-mulish">
+                Take a look around our portfolio.
+              </h1>
+              <p className="text-[#acacac] font-bold font-montserrat">
+                Portfolio, Look, Life, Good
+              </p>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -64,7 +68,10 @@ const Detail_section1 = () => {
             </div>
             <div className="w-full h-fit grid grid-cols-2 grid-rows-2 gap-5">
               {image_data.map((data, index) => (
-                <div className="w-[255px] h-[157px]" key={index}>
+                <div
+                  className="max-w-[255px] w-full h-[157px] overflow-hidden"
+                  key={index}
+                >
                   <img src={data} alt="logo" className="w-full object-cover" />
                 </div>
               ))}
@@ -78,14 +85,18 @@ const Detail_section1 = () => {
               key={index}
               className="w-full h-fit py-[30px] flex flex-col justify-center "
             >
-              <h1>{data.label}</h1>
+              <h1 className="text-[#acacac] text-[18px] font-bold font-montserrat">
+                {data.label}
+              </h1>
               <div className="w-full h-fit flex flex-row gap-4">
                 {data.index ? (
                   data.paragraphy.map((data, index) => (
                     <div key={index}>{data.icon}</div>
                   ))
                 ) : (
-                  <p>{data.paragraphy}</p>
+                  <p className="text-[#acacac] text-[16px] font-medium font-mulish">
+                    {data.paragraphy}
+                  </p>
                 )}
               </div>
             </div>

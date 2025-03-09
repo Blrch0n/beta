@@ -15,11 +15,11 @@ export default function Page() {
   return (
     <section className="w-full h-fit bg-white flex flex-col items-center">
       <Header />
-      <Section1 />
+      <Section1 children={"About Us"} />
       <Section2 />
       <Section3 />
       <Section9 />
-      <Section10 />
+      <Section10 children={"#ff9a00"} />
       <Section4 />
       <AboutUsFooter />
       <BackToTop />

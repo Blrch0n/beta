@@ -54,7 +54,7 @@ const teamMembers = [
   },
 ];
 
-export default function Section10() {
+export default function Section10({ children }) {
   return (
     <section
       className="w-full h-fit pt-[100px] pb-[50px] bg-white bg-cover bg-no-repeat"
@@ -92,7 +92,10 @@ export default function Section10() {
                   />
                   <div className="flex flex-col gap-2 text-base font-montserrat font-bold text-start text-black">
                     <h6>{member.name}</h6>
-                    <p className="text-[#a862e9] text-sm sm:text-[16px]">
+                    <p
+                      className="text-[#a862e9] text-sm sm:text-[16px]"
+                      style={{ color: children }}
+                    >
                       {member.role}
                     </p>
                   </div>

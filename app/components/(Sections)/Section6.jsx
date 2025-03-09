@@ -62,7 +62,7 @@ const services = [
   },
 ];
 
-const Section6 = () => {
+const Section6 = ({ children }) => {
   return (
     <section
       className="w-full flex justify-center py-16"
@@ -75,7 +75,7 @@ const Section6 = () => {
           </h4>
           <h3 className="text-black text-[32px] font-montserrat font-bold">
             We love to find simple{" "}
-            <span className="text-[#a762e9]">
+            <span className="text-[#a762e9]" style={{ color: children }}>
               Solutions to <br /> complex challenges.
             </span>
           </h3>

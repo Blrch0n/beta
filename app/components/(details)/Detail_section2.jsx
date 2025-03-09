@@ -21,9 +21,11 @@ const Detail_section2 = () => {
       <div className="max-w-[1140px] w-full flex flex-col h-fit">
         <div className="w-full h-fit flex flex-row gap-[50px]">
           <div className="w-full h-fit flex flex-col">
-            <div className="w-full h-fit flex flex-col gap-5">
-              <div>
-                <h1>Client's problem :</h1>
+            <div className="w-full h-fit flex flex-col gap-5 text-[#999]">
+              <div className="w-full h-fit flex flex-col gap-6">
+                <h1 className="text-[#222] text-[20px] font-montserrat font-bold">
+                  Client's problem :
+                </h1>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -34,7 +36,9 @@ const Detail_section2 = () => {
                 </p>
               </div>
               <div>
-                <h1>Client's problem :</h1>
+                <h1 className="text-[#222] text-[20px] font-montserrat font-bold">
+                  General requirments :
+                </h1>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -50,7 +54,9 @@ const Detail_section2 = () => {
                     key={index}
                     className="w-full h-fit flex flex-col relative gap-2 pl-[30px]"
                   >
-                    <h1 className="">{label.header}</h1>
+                    <h1 className="text-[#222] text-[20px] font-montserrat font-bold">
+                      {label.header}
+                    </h1>
                     <p>{label.paragraph}</p>
                     <div className="absolute top-0 flex p-[4px] items-center justify-center left-0 w-[12px] h-[18px] rounded-full bg-[#ebebeb]">
                       <span className="w-full h-full  rounded-full bg-[#ff9a00]"></span>
@@ -63,7 +69,7 @@ const Detail_section2 = () => {
           </div>
           <div className="w-full h-[680px]">
             <img
-              src="/image6.png"
+              src="/requirement-right.jpg"
               alt="image"
               className="w-full h-full object-cover"
             />

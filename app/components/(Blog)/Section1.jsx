@@ -6,55 +6,55 @@ const news_data = [
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
   {
     date: "14 January 2021",
     author: "By Md.Shaharia",
     header: "I like the body.I like to design everthing to do",
-    icon: <BsThreeDots size={20} />,
+    icon: <BsThreeDots size={20} color="black" />,
   },
 ];
 
@@ -74,11 +74,13 @@ const Section1_2 = () => {
                 className="w-full h-auto object-cover"
               />
               <div className="w-full h-fit flex flex-col gap-2 p-[30px] absolute bottom-0 right-0   bg-white rounded-[15px]">
-                <span>
+                <span className="text-[16px] font-medium font-mulish text-[#999]">
                   <p>{data.date}</p>
-                  <h2>{data.author}</h2>
+                  <h2 className=" text-[#ff9a00]">{data.author}</h2>
                 </span>
-                <h1>{data.header}</h1>
+                <h1 className="text-[22px] text-black font-bold">
+                  {data.header}
+                </h1>
                 <div>{data.icon}</div>
               </div>
             </div>
