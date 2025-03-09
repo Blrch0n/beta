@@ -3,7 +3,7 @@ import React from "react";
 const Section4 = () => {
   return (
     <section className="w-full h-fit flex justify-center py-[100px] bg-[#333333]">
-      <div className="max-w-[1140px] w-full h-full grid grid-cols-3 gap-[100px]">
+      <div className="max-w-[1140px] max-[1200px]:grid-cols-1 max-[1200px]:px-10 w-full h-full grid grid-cols-3 gap-[100px]">
         <div className="w-full h-fit flex flex-col gap-6 text-[16px] font-bold font-mulish text-[#999]">
           <img src="/logo_4.png" alt="logo" className="w-[110px] h-auto"></img>
           <p>

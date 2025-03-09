@@ -18,8 +18,8 @@ const labels = [
 const Detail_section2 = () => {
   return (
     <section className="w-full h-fit flex items-center justify-center py-[100px]">
-      <div className="max-w-[1140px] w-full flex flex-col h-fit">
-        <div className="w-full h-fit flex flex-row gap-[50px]">
+      <div className="max-w-[1140px] max-[1200px]:px-10 w-full flex flex-col h-fit">
+        <div className="w-full h-fit flex flex-row max-[992px]:flex-col max-[992px]:px-20 gap-[50px]">
           <div className="w-full h-fit flex flex-col">
             <div className="w-full h-fit flex flex-col gap-5 text-[#999]">
               <div className="w-full h-fit flex flex-col gap-6">

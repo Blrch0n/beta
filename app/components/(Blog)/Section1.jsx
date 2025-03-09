@@ -61,10 +61,10 @@ const news_data = [
 const Section1_2 = () => {
   return (
     <section className="w-full h-fit flex items-center justify-center py-[100px] bg-white">
-      <div className="max-w-[1140px] w-full h-fit grid grid-cols-3 gap-[50px]">
+      <div className="max-w-[1140px] max-[1200px]:px-10 w-full h-fit grid gap-10 max-[1000px]:grid-cols-2 max-[768px]:grid-cols-1 grid-cols-3">
         {news_data.map((data, index) => (
           <div
-            className="max-w-[350px] min-h-[350px] w-full relative h-full rounded-xl overflow-hidden shadow-md"
+            className="w-full min-h-[350px]  relative h-full rounded-xl overflow-hidden shadow-md"
             key={index}
           >
             <div className="w-full h-auto">

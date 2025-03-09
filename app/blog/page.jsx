@@ -2,10 +2,8 @@
 import React from "react";
 import Header from "../components/(Main_structure)/Header";
 import Section1 from "../components/(About Us)/Section1";
-import Section4 from "../components/(About Us)/Section4";
 import AboutUsFooter from "../components/(About Us)/AboutUsFooter";
 import BackToTop from "../components/(Main_structure)/BackToTop";
-import Section6 from "../components/(Sections)/Section6";
 import Section1_2 from "../components/(Blog)/Section1";
 
 const Page = () => {

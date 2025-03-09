@@ -40,8 +40,8 @@ const labels = [
 const Detail_section1 = () => {
   return (
     <section className="w-full h-fit flex items-center justify-center py-[100px] text-[#999]">
-      <div className="max-w-[1140px] w-full flex flex-col h-fit">
-        <div className="w-full h-fit py-[50px] flex flex-row gap-[50px]">
+      <div className="max-w-[1140px] max-[1200px]:px-20 w-full flex flex-col h-fit">
+        <div className="w-full h-fit py-[50px] flex max-[768px]:flex-col flex-row gap-[50px]">
           <div className="w-full h-[680px]">
             <img
               src="/image6.png"
@@ -66,29 +66,33 @@ const Detail_section1 = () => {
                 electronic typesetting,
               </p>
             </div>
-            <div className="w-full h-fit grid grid-cols-2 grid-rows-2 gap-5">
+            <div className="w-full h-fit grid grid-cols-2 max-[576px]:grid-cols-1 gap-10">
               {image_data.map((data, index) => (
                 <div
-                  className="max-w-[255px] w-full h-[157px] overflow-hidden"
+                  className="w-full h-[157px] overflow-hidden" // Removed min-w-[255px]
                   key={index}
                 >
-                  <img src={data} alt="logo" className="w-full object-cover" />
+                  <img
+                    src={data}
+                    alt="logo"
+                    className="w-full h-full object-cover object-center" // Added h-full
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
         <hr className="w-full h-[1px] bg-[#999]"></hr>
-        <div className="w-full h-fit grid grid-cols-4">
+        <div className="w-full h-fit max-[768px]:grid-cols-2 max-[576px]:grid-cols-1 grid grid-cols-4">
           {labels.map((data, index) => (
             <div
               key={index}
-              className="w-full h-fit py-[30px] flex flex-col justify-center "
+              className="w-full h-fit py-[30px] flex items-center flex-col justify-center "
             >
               <h1 className="text-[#acacac] text-[18px] font-bold font-montserrat">
                 {data.label}
               </h1>
-              <div className="w-full h-fit flex flex-row gap-4">
+              <div className="w-full h-fit flex justify-center flex-row gap-4">
                 {data.index ? (
                   data.paragraphy.map((data, index) => (
                     <div key={index}>{data.icon}</div>

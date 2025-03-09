@@ -12,7 +12,7 @@ const section1_data = [
 const Section1_1 = () => {
   return (
     <section className="w-full h-fit bg-white flex justify-center items-center py-[100px]">
-      <div className="max-w-[1140px] w-full h-fit grid grid-cols-2 grid-rows-3 gap-10">
+      <div className="max-w-[1140px] max-[1200px]:px-20 max-[768px]:grid-cols-1 w-full h-fit grid grid-cols-2 grid-rows-3 gap-10">
         {section1_data.map((data, index) => (
           <div className="w-full h-full relative group" key={index}>
             <img src={data} alt="logo" className="w-full object-cover" />
