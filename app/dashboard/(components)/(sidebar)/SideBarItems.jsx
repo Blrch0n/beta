@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { FaImages } from "react-icons/fa";
@@ -6,50 +7,155 @@ import { MdFindInPage } from "react-icons/md";
 import { FaBloggerB } from "react-icons/fa";
 import { MdOutlineContactSupport } from "react-icons/md";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const sideBarItems_data = [
   {
     icon: <FaHome />,
     title: "Home",
-    url: "/",
+    url: "",
+    order: 1,
+    extra_sections: [
+      { title: "All", url: "" },
+      { title: "Section1", url: "" },
+      { title: "Section2", url: "" },
+      { title: "Section3", url: "" },
+      { title: "Section4", url: "" },
+      { title: "Section5", url: "" },
+      { title: "Section6", url: "" },
+      { title: "Section7", url: "" },
+      { title: "Section8", url: "" },
+      { title: "Section9", url: "" },
+      { title: "Section10", url: "" },
+      { title: "Section11", url: "" },
+    ],
   },
   {
     icon: <FaInfoCircle />,
     title: "About Us",
-    url: "/about-us",
+    url: "about-us",
+    order: 2,
+    extra_sections: [
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+    ],
   },
   {
     icon: <FaImages />,
     title: "Portfolio",
-    url: "/portfolio",
+    url: "portfolio",
+    order: 3,
+    extra_sections: [
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+    ],
   },
   {
     icon: <MdFindInPage />,
     title: "Pages",
-    url: "/pages",
+    url: "pages",
+    order: 4,
+    extra_sections: [
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+    ],
   },
   {
     icon: <FaBloggerB />,
     title: "Blog",
-    url: "/blog",
+    url: "blog",
+    order: 5,
+    extra_sections: [
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+    ],
   },
   {
     icon: <MdOutlineContactSupport />,
     title: "Contact Us",
-    url: "/contact-us",
+    url: "contact-us",
+    order: 6,
+    extra_sections: [
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+      { title: "Home", url: "" },
+    ],
   },
 ];
 
 const SideBarItems = () => {
+  const pathname = usePathname();
+  const [isClicked, setIsClicked] = useState(0);
+
+  useEffect(() => {
+    console.log("Route changed to:", pathname);
+  }, [pathname]);
   return (
-    <div className="w-full h-fit flex flex-col gap-4">
+    <div className="w-full h-fit flex flex-col">
       {sideBarItems_data.map((data, index) => (
-        <Link href={`/dashboard${data.url}`} key={index}>
-          <div className="w-full h-fit flex flex-row gap-4 p-5 items-center bg-[#333] rounded-lg hover:bg-[#ff9a00] cursor-pointer">
+        <div
+          className="w-full h-fit flex flex-col"
+          key={index}
+          onClick={() => {
+            setIsClicked(index + 1);
+          }}
+        >
+          <div
+            className="w-full h-fit flex flex-row gap-4 p-5 items-center bg-[#333] hover:text-black rounded-lg cursor-pointer"
+            style={{
+              background:
+                pathname === `/dashboard/${data.url}` ? "#000" : "#333",
+            }}
+          >
             {data.icon}
             <p>{data.title}</p>
           </div>
-        </Link>
+          <div className="w-full h-fit pl-4 flex flex-col py-1">
+            {data.extra_sections.map((value, index) => (
+              <Link href={`/dashboard/${value.url}`} key={index} className="">
+                <div
+                  className="w-full h-fit flex-row gap-4 p-5 items-center hidden bg-[#333] hover:text-black rounded-lg cursor-pointer"
+                  style={{
+                    background:
+                      pathname === `/dashboard/${value.url}` ? "#000" : "#333",
+                    display: data.order === isClicked ? "flex" : "none",
+                  }}
+                >
+                  <p>{value.title}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   );
