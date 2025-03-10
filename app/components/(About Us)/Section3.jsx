@@ -38,7 +38,7 @@ const Section3 = () => {
                 <span className="h-full w-[1px] bg-[#ff9a00]"></span>
                 {clickedIndex === index ? (
                   <div
-                    className="w-[230px] h-[80px] bg-white rounded-xl border-[1px] border-[#ff9a00] absolute top-0 flex justify-center items-center flex-col mx-auto z-40"
+                    className="w-[230px] max-[592px]:w-[150px] h-[80px] bg-white rounded-xl border-[1px] border-[#ff9a00] absolute top-0 flex justify-center items-center flex-col mx-auto z-40"
                     style={{ marginTop: !item.long ? "55px" : "-35px" }}
                   >
                     <h1 className="text-[17px] font-montserrat font-bold text-[#222]">

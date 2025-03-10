@@ -69,7 +69,7 @@ const Header = () => {
       }}
     >
       <div className="w-[1140px] max-[1200px]:w-full max-[1200px]:px-[50px] h-fit flex flex-row items-center">
-        <div className="w-full h-full py-[30px] flex justify-between px-[15px]">
+        <div className="w-full h-full py-[30px] flex items-center justify-between px-[15px]">
           <a href="/">
             <Image
               src="/logo_4.png"

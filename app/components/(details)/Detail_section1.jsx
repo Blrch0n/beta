@@ -40,7 +40,7 @@ const labels = [
 const Detail_section1 = () => {
   return (
     <section className="w-full h-fit flex items-center justify-center py-[100px] text-[#999]">
-      <div className="max-w-[1140px] max-[1200px]:px-20 w-full flex flex-col h-fit">
+      <div className="max-w-[1140px] max-[1200px]:px-20 max-[992px]:px-10 w-full flex flex-col h-fit">
         <div className="w-full h-fit py-[50px] flex max-[768px]:flex-col flex-row gap-[50px]">
           <div className="w-full h-[680px]">
             <img

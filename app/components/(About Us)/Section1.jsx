@@ -9,7 +9,10 @@ const Section1 = ({ children }) => {
       <div className="max-w-[1140px] w-full h-[390px] flex flex-col text-black justify-center items-center">
         <h2 className="text-[40px] font-montserrat font-bold">{children}</h2>
         <span className="text-[16px] font-mulish font-semibold text-[#333]">
-          <a href="/">Home </a>/ {children}
+          <a href="/" className="cursor-pointer">
+            Home{" "}
+          </a>
+          / {children}
         </span>
       </div>
     </section>

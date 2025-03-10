@@ -7,14 +7,14 @@ import { FaLinkedin } from "react-icons/fa";
 const Section12 = () => {
   return (
     <section className="w-full min-h-[609.6px] h-fit py-20 flex overflow-hidden justify-center relative items-center">
-      <span className="absolute top-0 left-0 w-[40%] max-[992px]:w-full h-full -z-[10]">
+      <span className="absolute top-0 right-0 w-[40%] max-[992px]:w-full h-full z-[10]">
         <img
           src="/image_form.jpg"
           className="w-full h-full object-cover"
           alt="background"
         ></img>
       </span>
-      <div className="max-w-[1140px] w-full max-[1200px]:px-20 h-fit flex flex-row max-[992px]:flex-col gap-20">
+      <div className="max-w-[1140px] w-full max-[1200px]:px-20 z-[11] h-fit flex flex-row max-[992px]:flex-col gap-20">
         <div className="flex flex-col gap-5 w-full max-w-[517px] h-fit">
           <div className="flex flex-col w-full gap-[10px] items-start">
             <h3 className="text-[24px] font-bold font-montserrat text-black">
@@ -54,17 +54,17 @@ const Section12 = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-6 rounded-full"
+              className="w-full p-6 rounded-full border-[#000] border"
             ></input>
             <input
               type="text"
               placeholder="Your Email"
-              className="w-full p-6 rounded-full"
+              className="w-full p-6 rounded-full border-[#000] border"
             ></input>
           </div>
           <textarea
             placeholder="Your Message"
-            className="w-full p-5 h-[211px] rounded-[10px]"
+            className="w-full p-5 h-[211px] rounded-[10px] border-[#000] border"
           ></textarea>
           <button className="group px-[60px] py-[20px] rounded-full bg-white overflow-hidden text-black border-[1px] relative border-[#ff9a00]">
             <span className="absolute top-0 right-[6px] h-10 w-10 flex items-center group-hover:translate-y-[-40px] duration-200 justify-center rounded-full rounded-tl-none bg-[#ff9a00]">
