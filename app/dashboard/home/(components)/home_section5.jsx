@@ -4,9 +4,46 @@ const user_board_data = [
     name: "Images",
     size: "full",
   },
+  {
+    name: "Label",
+    size: "full",
+  },
+  {
+    name: "paragraph",
+    size: "full",
+  },
 ];
 const user_data = [
-  { images: ["1.png", "1.png", "1.png", "1.png", "1.png", "1.png"] },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
+  {
+    image: "1.png",
+    label: "look,life,good",
+    paragraph: "portfolio title or details",
+  },
 ];
 
 const Home_Section_5 = () => {
@@ -35,8 +72,10 @@ const Home_Section_5 = () => {
                   className="w-full flex flex-row items-center h-fit p-5 bg-blue-200"
                   key={index}
                 >
-                  <div className="h-fit w-full ">
-                    <p>{data.images[0]}</p>
+                  <div className="h-fit w-full flex flex-row items-center">
+                    <p className="w-full h-fit">{data.image}</p>
+                    <p className="w-full h-fit">{data.label}</p>
+                    <p className="w-full h-fit">{data.paragraph}</p>
                   </div>
                 </div>
               ))}
