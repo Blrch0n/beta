@@ -16,18 +16,18 @@ const sideBarItems_data = [
     url: "",
     order: 1,
     extra_sections: [
-      { title: "All", url: "" },
-      { title: "Section1", url: "" },
-      { title: "Section2", url: "" },
-      { title: "Section3", url: "" },
-      { title: "Section4", url: "" },
-      { title: "Section5", url: "" },
-      { title: "Section6", url: "" },
-      { title: "Section7", url: "" },
-      { title: "Section8", url: "" },
-      { title: "Section9", url: "" },
-      { title: "Section10", url: "" },
-      { title: "Section11", url: "" },
+      { title: "All", url: "/" },
+      { title: "Section1", url: "home/section1" },
+      { title: "Section2", url: "home/section2" },
+      { title: "Section3", url: "home/section3" },
+      { title: "Section4", url: "home/section4" },
+      { title: "Section5", url: "home/section5" },
+      { title: "Section6", url: "home/section6" },
+      { title: "Section7", url: "home/section7" },
+      { title: "Section8", url: "home/section8" },
+      { title: "Section9", url: "home/section9" },
+      { title: "Section10", url: "home/section10" },
+      { title: "Section11", url: "home/section11" },
     ],
   },
   {
@@ -126,7 +126,7 @@ const SideBarItems = () => {
           className="w-full h-fit flex flex-col"
           key={index}
           onClick={() => {
-            setIsClicked(index + 1);
+            setIsClicked((prev) => (prev === index + 1 ? 0 : index + 1));
           }}
         >
           <div
